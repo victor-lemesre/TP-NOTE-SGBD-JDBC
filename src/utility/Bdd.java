@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.Properties;
 
 public class Bdd {
-	private static Connection c;
+	public static Connection c;
 	private static Statement stmt;
 	private static PreparedStatement pstmt;
 
