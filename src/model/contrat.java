@@ -3,17 +3,24 @@ package model;
 import java.time.LocalDate;
 
 public class contrat {
-	private LocalDate dateDeColclusion;
+	private LocalDate dateDeConclusion;
 	private String adresseDeLivraison;
 	private employe employe;
 	private client_parent client;
 	
-	
-	public LocalDate getDateDeColclusion() {
-		return dateDeColclusion;
+	public contrat(LocalDate _dateDeConclusion, String _adresseDeLivraison, employe _employe, client_parent _client) {
+		this.dateDeConclusion = _dateDeConclusion;
+		this.adresseDeLivraison = _adresseDeLivraison;
+		this.employe = _employe;
+		this.client = _client;
 	}
-	public void setDateDeColclusion(LocalDate dateDeColclusion) {
-		this.dateDeColclusion = dateDeColclusion;
+	
+	
+	public LocalDate getDateDeConclusion() {
+		return dateDeConclusion;
+	}
+	public void setDateDeConclusion(LocalDate dateDeColclusion) {
+		this.dateDeConclusion = dateDeColclusion;
 	}
 	public String getAdresseDeLivraison() {
 		return adresseDeLivraison;

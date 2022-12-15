@@ -23,6 +23,8 @@ public class clientController {
 			rs.next();
 			while (rs.next()) {
 			// TODO
+				//select * from client_parent, entreprise where Idclient = fk_idclient
+				//select * from client_parent, particulier where Idclient = fk_idclient
 			}
 			s.close();
 		} catch (SQLException e) {

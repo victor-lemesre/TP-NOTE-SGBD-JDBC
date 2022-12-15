@@ -4,6 +4,11 @@ public class telephone {
 	private String numTelephone;
 	private client_parent client;
 	
+	public telephone(String _numTelephone, client_parent _client) {
+		this.numTelephone = _numTelephone;
+		this.client = _client;		
+	}
+	
 	
 	public String getNumTelephone() {
 		return numTelephone;

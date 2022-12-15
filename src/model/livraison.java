@@ -6,6 +6,11 @@ public class livraison {
 	private LocalDateTime dateHeureLivraison;
 	private contrat contrat;
 	
+	public livraison(LocalDateTime _dateHeureLivraison, contrat _contrat) {
+				this.dateHeureLivraison = _dateHeureLivraison;
+				this.contrat = _contrat;
+	}
+	
 	
 	public LocalDateTime getDateHeureLivraison() {
 		return dateHeureLivraison;

@@ -6,6 +6,8 @@ import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
+import model.client_parent;
+import model.contrat;
 import model.meuble;
 import utility.Bdd;
 
@@ -18,17 +20,16 @@ public class meubleController {
 		try {
 			
 			s = Bdd.c.createStatement();
-			ResultSet rs = s.executeQuery("SELECT * FROM meuble where hauteur= '"+ _hauteur + "' ;");
+			ResultSet rs = s.executeQuery("SELECT * FROM meuble, contrat, livraison where hauteur= '"+ _hauteur + "' ;");
 			rs.next();
 			while (rs.next()) {
-				meuble m = new meuble();
-				m.setPrix(rs.getFloat("meuble.prix"));
-				m.setLongueur(rs.getFloat("meuble.longueur"));
-				m.setLargeur(rs.getFloat("meuble.largeur"));
-				m.setHauteur(rs.getFloat("meuble.hauteur"));
-				m.setFournisseur(rs.getString("meuble.fournisseur"));
-				m.setContrat(null); // TODO
-				m.setLivraison(null); //TODO
+				client_parent cp = new client_parent();
+				contrat c = new contrat();// LocalDate _dateDeConclusion, String _adresseDeLivraison, employe _employe, client_parent _client
+				// livraison l = new livraison(rs.getString("meuble.fournisseur",c));// LocalDateTime _dateHeureLivraison, contrat _contrat
+				meuble m = new meuble(rs.getFloat("meuble.prix"),rs.getFloat("meuble.longueur"),
+						rs.getFloat("meuble.largeur"),rs.getFloat("meuble.hauteur"),
+						rs.getString("meuble.fournisseur"),c,l);
+
 			}
 			s.close();
 		} catch (SQLException e) {

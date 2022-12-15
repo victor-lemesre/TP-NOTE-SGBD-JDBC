@@ -9,6 +9,17 @@ public class meuble {
 	private livraison livraison;
 	private contrat contrat;
 	
+	public meuble(Float _prix,Float _longueur, Float _largeur, Float _hauteur, String _fournisseur, livraison _livraison, contrat _contrat) {
+		this.prix = _prix;
+		this.longueur = _longueur;
+		this.largeur = _largeur;
+		this.hauteur = _hauteur;
+		this.fournisseur = _fournisseur;
+		this.livraison = _livraison;
+		this.contrat = _contrat;
+		
+	}
+	
 	
 	public Float getPrix() {
 		return prix;

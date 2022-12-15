@@ -6,6 +6,12 @@ public class entreprise extends client_parent{
 	private Integer numeroTVA;
 	private String nomSociete;
 	
+	public entreprise(String _adresse,Integer _numeroTVA, String _nomSociete) {
+		super(_adresse);
+		this.numeroTVA = _numeroTVA;
+		this.nomSociete = _nomSociete;
+	}
+	
 	public Integer getNumeroTVA() {
 		return numeroTVA;
 	}
