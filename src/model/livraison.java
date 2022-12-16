@@ -1,14 +1,15 @@
 package model;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class livraison {
 	private LocalDateTime dateHeureLivraison;
-	private contrat contrat;
+	private List<meuble> listMeuble;
 	
-	public livraison(LocalDateTime _dateHeureLivraison, contrat _contrat) {
+	public livraison(LocalDateTime _dateHeureLivraison,List<meuble> _listMeuble) {
 				this.dateHeureLivraison = _dateHeureLivraison;
-				this.contrat = _contrat;
+				this.listMeuble = _listMeuble;
 	}
 	
 	
@@ -18,12 +19,17 @@ public class livraison {
 	public void setDateHeureLivraison(LocalDateTime dateHeureLivraison) {
 		this.dateHeureLivraison = dateHeureLivraison;
 	}
-	public contrat getContrat() {
-		return contrat;
+
+
+	public List<meuble> getListMeuble() {
+		return listMeuble;
 	}
-	public void setContrat(contrat contrat) {
-		this.contrat = contrat;
+
+
+	public void setListMeuble(List<meuble> listMeuble) {
+		this.listMeuble = listMeuble;
 	}
+
 	
 	
 

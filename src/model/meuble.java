@@ -6,19 +6,19 @@ public class meuble {
 	private Float largeur;
 	private Float hauteur;
 	private String fournisseur;
-	private livraison livraison;
-	private contrat contrat;
+	private Boolean estReserve;
 	
-	public meuble(Float _prix,Float _longueur, Float _largeur, Float _hauteur, String _fournisseur, livraison _livraison, contrat _contrat) {
+
+	
+	public meuble(Float _prix,Float _longueur, Float _largeur, Float _hauteur, String _fournisseur,Boolean _estReserve) {
 		this.prix = _prix;
 		this.longueur = _longueur;
 		this.largeur = _largeur;
 		this.hauteur = _hauteur;
 		this.fournisseur = _fournisseur;
-		this.livraison = _livraison;
-		this.contrat = _contrat;
-		
+		this.estReserve = _estReserve;
 	}
+
 	
 	
 	public Float getPrix() {
@@ -55,20 +55,17 @@ public class meuble {
 	public void setFournisseur(String fournisseur) {
 		this.fournisseur = fournisseur;
 	}
+
+
+	public Boolean getEstReserve() {
+		return estReserve;
+	}
+
+
+	public void setEstReserve(Boolean estReserve) {
+		this.estReserve = estReserve;
+	}
 	
-	public livraison getLivraison() {
-		return livraison;
-	}
-	public void setLivraison(livraison livraison) {
-		this.livraison = livraison;
-	}
-	
-	public contrat getContrat() {
-		return contrat;
-	}
-	public void setContrat(contrat contrat) {
-		this.contrat = contrat;
-	}
 
 	
 	

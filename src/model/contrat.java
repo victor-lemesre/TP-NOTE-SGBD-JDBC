@@ -1,18 +1,19 @@
 package model;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class contrat {
 	private LocalDate dateDeConclusion;
 	private String adresseDeLivraison;
-	private employe employe;
-	private client_parent client;
+	private List<meuble> listMeuble;
+	private List<livraison> listLivraison;
 	
-	public contrat(LocalDate _dateDeConclusion, String _adresseDeLivraison, employe _employe, client_parent _client) {
+	public contrat(LocalDate _dateDeConclusion, String _adresseDeLivraison,List<meuble> _listMeuble,List<livraison> _listLivraison) {
 		this.dateDeConclusion = _dateDeConclusion;
 		this.adresseDeLivraison = _adresseDeLivraison;
-		this.employe = _employe;
-		this.client = _client;
+		this.listMeuble = _listMeuble;
+		this.listLivraison = _listLivraison;
 	}
 	
 	
@@ -28,17 +29,25 @@ public class contrat {
 	public void setAdresseDeLivraison(String adresseDeLivraison) {
 		this.adresseDeLivraison = adresseDeLivraison;
 	}
-	public employe getEmploye() {
-		return employe;
+
+
+	public List<meuble> getListMeuble() {
+		return listMeuble;
 	}
-	public void setEmploye(employe employe) {
-		this.employe = employe;
+
+
+	public void setListMeuble(List<meuble> listMeuble) {
+		this.listMeuble = listMeuble;
 	}
-	public client_parent getClient() {
-		return client;
+
+
+	public List<livraison> getListLivraison() {
+		return listLivraison;
 	}
-	public void setClient(client_parent client) {
-		this.client = client;
+
+
+	public void setListLivraison(List<livraison> listLivraison) {
+		this.listLivraison = listLivraison;
 	}
 	
 	
