@@ -1,6 +1,7 @@
 package model;
 
 public class meuble {
+	private String typeMeuble;
 	private Float prix;
 	private Float longueur;
 	private Float largeur;
@@ -10,7 +11,8 @@ public class meuble {
 	
 
 	
-	public meuble(Float _prix,Float _longueur, Float _largeur, Float _hauteur, String _fournisseur,Boolean _estReserve) {
+	public meuble(String _typeMeuble,Float _prix,Float _longueur, Float _largeur, Float _hauteur, String _fournisseur,Boolean _estReserve) {
+		this.typeMeuble = _typeMeuble;
 		this.prix = _prix;
 		this.longueur = _longueur;
 		this.largeur = _largeur;
@@ -21,6 +23,18 @@ public class meuble {
 
 	
 	
+	public String getTypeMeuble() {
+		return typeMeuble;
+	}
+
+
+
+	public void setTypeMeuble(String typeMeuble) {
+		this.typeMeuble = typeMeuble;
+	}
+
+
+
 	public Float getPrix() {
 		return prix;
 	}

@@ -4,24 +4,29 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class contrat {
-	private LocalDate dateDeConclusion;
+	private String dateDeConclusion; // TODO change to localdate
 	private String adresseDeLivraison;
 	private List<meuble> listMeuble;
 	private List<livraison> listLivraison;
 	
-	public contrat(LocalDate _dateDeConclusion, String _adresseDeLivraison,List<meuble> _listMeuble,List<livraison> _listLivraison) {
+	public contrat(String _dateDeConclusion, String _adresseDeLivraison,List<meuble> _listMeuble,List<livraison> _listLivraison) {
 		this.dateDeConclusion = _dateDeConclusion;
 		this.adresseDeLivraison = _adresseDeLivraison;
 		this.listMeuble = _listMeuble;
 		this.listLivraison = _listLivraison;
 	}
 	
+	public contrat(String _dateDeConclusion, String _adresseDeLivraison) {
+		this.dateDeConclusion = _dateDeConclusion;
+		this.adresseDeLivraison = _adresseDeLivraison;
+	}
 	
-	public LocalDate getDateDeConclusion() {
+	
+	public String getDateDeConclusion() {
 		return dateDeConclusion;
 	}
-	public void setDateDeConclusion(LocalDate dateDeColclusion) {
-		this.dateDeConclusion = dateDeColclusion;
+	public void setDateDeConclusion(String dateDeConclusion) {
+		this.dateDeConclusion = dateDeConclusion;
 	}
 	public String getAdresseDeLivraison() {
 		return adresseDeLivraison;

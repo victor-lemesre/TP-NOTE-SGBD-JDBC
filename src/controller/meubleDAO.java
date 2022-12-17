@@ -11,18 +11,19 @@ import utility.Bdd;
 
 public class meubleDAO {
 
-	public static List<meuble> getHauteurAvecHauteur(float _hauteur) {
+	public static List<meuble> getMeubleAvecHauteur(float _hauteur) {
 		Statement s;
 		List<meuble> la = new LinkedList<meuble>();
 
 		try {
 
 			s = Bdd.c.createStatement();
-			s.execute("SELECT * FROM meuble where hauteur= '" + _hauteur + "' ;");
+			s.execute("SELECT * FROM meuble where hauteur= " + _hauteur + " ;");
 			ResultSet rs = s.getResultSet();
-			rs.next();
+			//rs.next();
 			while (rs.next()) {
-				meuble m = new meuble(rs.getFloat("meuble.prix"),
+				meuble m = new meuble(rs.getString("meuble.typeMeuble"),
+						rs.getFloat("meuble.prix"),
 						rs.getFloat("meuble.longueur"),
 						rs.getFloat("meuble.largeur"),
 						rs.getFloat("meuble.hauteur"),

@@ -1,22 +1,25 @@
 package model;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class livraison {
-	private LocalDateTime dateHeureLivraison;
+	private String dateHeureLivraison; //TODO change to LocalDateTime 
 	private List<meuble> listMeuble;
 	
-	public livraison(LocalDateTime _dateHeureLivraison,List<meuble> _listMeuble) {
+	public livraison(String _dateHeureLivraison,List<meuble> _listMeuble) {
 				this.dateHeureLivraison = _dateHeureLivraison;
 				this.listMeuble = _listMeuble;
 	}
 	
+	public livraison(String _dateHeureLivraison) {
+		this.dateHeureLivraison = _dateHeureLivraison;
+}
 	
-	public LocalDateTime getDateHeureLivraison() {
+	
+	public String getDateHeureLivraison() {
 		return dateHeureLivraison;
 	}
-	public void setDateHeureLivraison(LocalDateTime dateHeureLivraison) {
+	public void setDateHeureLivraison(String dateHeureLivraison) {
 		this.dateHeureLivraison = dateHeureLivraison;
 	}
 
