@@ -80,6 +80,18 @@ public class meuble {
 		this.estReserve = estReserve;
 	}
 	
+	@Override
+	public String toString() {
+		String dispo;
+		if(this.estReserve) {
+			dispo = "non";
+		}else {
+			dispo = "oui";
+		}
+		String result = "typeMeuble = "+ this.typeMeuble+" prix = "+this.prix+"|longueur = "+this.longueur+"|largeur = "+this.largeur+"|hauteur = "+this.hauteur+"|fournisseur = "+this.fournisseur+"|disponible"+dispo
+				+"\n___________________________________________________________________________________________________________________________";
+		return result;
+	}
 
 	
 	

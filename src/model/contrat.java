@@ -1,10 +1,9 @@
 package model;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public class contrat {
-	private String dateDeConclusion; // TODO change to localdate
+	private String dateDeConclusion; 
 	private String adresseDeLivraison;
 	private List<meuble> listMeuble;
 	private List<livraison> listLivraison;
@@ -55,6 +54,24 @@ public class contrat {
 		this.listLivraison = listLivraison;
 	}
 	
-	
+	@Override
+	public String toString() {
+		String result;
+		String livre;
+		String meuble="";
+		if(listLivraison != null) {
+			livre = "oui";
+		}else {
+			livre = "non";
+		}
+		for(meuble m : listMeuble) {
+			meuble += "\n			-"+m.getTypeMeuble();
+		}
+		result = "_________________________________________________________________________________________\n"
+				+ "date de conclusion = "+this.dateDeConclusion+"|adresse de divraison = "+this.adresseDeLivraison+"|est livre = "+livre+""
+				+ "\n liste des meubles"+meuble
+				+"\n_________________________________________________________________________________________\n";
+		return result;
+	}
 
 }

@@ -45,7 +45,8 @@ public class Bdd {
 				+ "FOREIGN KEY (IdContrat) REFERENCES contrat(IdContrat));";
 
 		String employe = "CREATE TABLE employe ("
-				+ "IdEmploye INT NOT NULL AUTO_INCREMENT, " 
+				+ "IdEmploye INT NOT NULL AUTO_INCREMENT, "
+				+ "Prenom VARCHAR(100),"
 				+ "domaine VARCHAR(100),"
 				+ "PRIMARY KEY (IdEmploye));";
 
@@ -88,7 +89,7 @@ public class Bdd {
 
 		String telephone = "CREATE TABLE telephone (" 
 				+ "IdTelephone INT NOT NULL AUTO_INCREMENT,"
-				+ "telephone VARCHAR(20)," 
+				+ "numTelephone VARCHAR(20)," 
 				+ "IdClient INT ,"
 				+ "PRIMARY KEY (IdTelephone) ," 
 				+ "FOREIGN KEY (IdClient) REFERENCES entreprise(IdClient));";
@@ -135,15 +136,15 @@ public class Bdd {
 			
 			//ajout des telephone de l'entreprise
 			
-			stmt.execute("INSERT INTO telephone(IdClient,telephone) VALUES (2,'0666999013')");
-			stmt.execute("INSERT INTO telephone(IdClient,telephone) VALUES (2,'0684759612')");
-			stmt.execute("INSERT INTO telephone(IdClient,telephone) VALUES (2,'0619283264')");
+			stmt.execute("INSERT INTO telephone(IdClient,numTelephone) VALUES (2,'0666999013')");
+			stmt.execute("INSERT INTO telephone(IdClient,numTelephone) VALUES (2,'0684759612')");
+			stmt.execute("INSERT INTO telephone(IdClient,numTelephone) VALUES (2,'0619283264')");
 			
 			//ajout des employes
 			
-			stmt.execute("INSERT INTO employe (domaine) VALUES ('commercial')");
-			stmt.execute("INSERT INTO employe (domaine) VALUES ('fabriquant')");
-			stmt.execute("INSERT INTO employe (domaine) VALUES ('employe administratif')");
+			stmt.execute("INSERT INTO employe (prenom,domaine) VALUES ('Paul','commercial')");
+			stmt.execute("INSERT INTO employe (prenom,domaine) VALUES ('Theo','fabriquant')");
+			stmt.execute("INSERT INTO employe (prenom,domaine) VALUES ('Martin','employe administratif')");
 			
 			//ajout des contrats
 			stmt.execute("INSERT INTO contrat (dateDeConclusion,adresseDeLivraison,IdClient,IdEmploye) VALUES ('2022-9-9','45 allee ferdinand de lesseps',1,1)");

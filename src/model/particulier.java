@@ -34,6 +34,12 @@ public class particulier extends client_parent{
 		this.telephone = telephone;
 	}
 	
+	public String tostring() {
+		String result = "_________________________________________________________________________________________\n"
+				+ "nom: "+ this.nom+"\nprenom: "+prenom+"\nadresse: "+super.getAdresse()+"\ntelephone: "+telephone
+				+"\n_________________________________________________________________________________________\n";
+		return result;
+	}
 	
 	
 
